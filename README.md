@@ -1,3 +1,5 @@
+<div align="justify">
+
 # 💻 computacion-visual 💻
 
 Repositorio para el curso de Computación Visual, correspondiente al primer semestre de 2025.
@@ -32,8 +34,11 @@ Cada actividad está organizada en carpetas con el formato `YYYY-MM-DD_nombreAct
 - Unity (C#).
 - React Three Fiber (Three.js + React).
 - Processing (2D y 3D).
-
+<!--
 ## 🚧 Notas 🚧
 
 - Se ha configurado `.gitignore` para evitar subir archivos pesados, temporales o generados automáticamente.
 - Todos los commits están escritos en inglés con mensajes descriptivos para facilitar el seguimiento del historial de desarrollo.
+-->
+
+</div>
