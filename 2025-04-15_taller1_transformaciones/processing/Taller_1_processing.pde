@@ -1,7 +1,7 @@
 import gifAnimation.*; //Libreria para exportar gif.
 
 GifMaker gifExport;
-int frameLimit = 480; // Total de frames (~3 segundos a 60fps)
+int frameLimit = 480; // Total de frames (~6 segundos a 60fps)
 
 float[][] vertices = new float[6][3];
 
@@ -10,7 +10,7 @@ void setup() {
   frameRate(60);
   
   // Inicializar exportación de GIF
-  gifExport = new GifMaker(this, "hexagono3D.gif");
+  gifExport = new GifMaker(this, "Taller_1_processing_hexagono.gif");
   gifExport.setRepeat(0);      // 0 = loop infinito
   gifExport.setQuality(10);    // Calidad (1–255)
   gifExport.setDelay(16);      // Delay entre frames en ms (~60fps)
@@ -25,7 +25,8 @@ void setup() {
 }
 
 void draw() {
-  background(30);
+  background(#4a4e69);
+  //background(0);
   float t = millis() / 1000.0; // Tiempo en segundos
   
   // Parámetros de transformación
