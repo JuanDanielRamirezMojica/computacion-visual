@@ -46,19 +46,62 @@ El resultado es una animación clara del efecto compuesto de las transformacione
 
 ---
 
-## 2. Unity (WIP)
+## 2. Unity (Transformaciones en 3D)
 
-🔧 **WIP**
+![unity.gif](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-04-15_taller1_transformaciones/unity/Taller1_TransformacionesUnity.gif)
 
-Se planea realizar una animación 3D en Unity en la cual se cree un objeto (probablemente un cubo o esfera) al que se le apliquen transformaciones similares a las del entorno Python, pero esta vez en un espacio tridimensional.
+[Ver implementación en el repositorio](https://github.com/JuanDanielRamirezMojica/computacion-visual/tree/main/2025-04-15_taller1_transformaciones/unity)
 
-La idea es utilizar `Transform` y `Time.deltaTime` en un script de C# para:
+En Unity, se creó un proyecto en 3D donde un objeto (cubo) es animado mediante transformaciones geométricas en tiempo real a través de un script en C#. Las transformaciones se aplican directamente sobre el componente `Transform`.
 
-- Trasladar el objeto siguiendo una trayectoria circular
-- Rotarlo constantemente en uno o más ejes
-- Escalarlo de manera dinámica en función del tiempo
+El comportamiento del objeto incluye:
 
-El entorno de Unity permitirá observar el comportamiento de estas transformaciones en un contexto más interactivo y visualmente potente.
+- Rotación constante: el cubo rota de forma continua en los ejes X, Y y Z con una velocidad fija.
+- Escalado oscilante: su escala varía en los tres ejes al ritmo de una función `sin`, simulando un efecto de “latido”.
+- Traslación aleatoria: cada ciertos segundos, el objeto se mueve aleatoriamente a lo largo del eje X o Y, en direcciones variables.
+
+Estas transformaciones se ejecutan en el método `Update()`, lo que permite que se actualicen cada frame en función del tiempo (`Time.deltaTime` y `Time.time`).
+
+### Código relevante: `DynamicTransform.cs`
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DynamicTransform : MonoBehaviour
+{
+    private float timeSinceLastMove = 0f;
+    public float timeBetweenMoves = 2f;
+    public float movementDistance = 3.5f;
+
+    void Update()
+    {
+        // 1. Rotación constante
+        transform.Rotate(new Vector3(30, 45, 60) * Time.deltaTime);
+
+        // 2. Escalado oscilante
+        float scale = 1 + 0.3f * Mathf.Sin(Time.time * 2f);
+        transform.localScale = new Vector3(scale, scale, scale);
+
+        // 3. Traslación aleatoria en X o Y
+        timeSinceLastMove += Time.deltaTime;
+        if (timeSinceLastMove >= timeBetweenMoves)
+        {
+            timeSinceLastMove = 0f;
+            int axisToMove = Random.Range(0, 2);
+            float randomDirection = Random.Range(-1f, 1f);
+            Vector3 movement = axisToMove == 0 ?
+                new Vector3(randomDirection * movementDistance, 0f, 0f) :
+                new Vector3(0f, randomDirection * movementDistance, 0f);
+
+            transform.Translate(movement, Space.World);
+        }
+    }
+}
+```
+
+Nota: No fue posible subir el proyecto completo de Unity al repositorio debido a un error al hacer git commit, relacionado con nombres de archivo demasiado largos (Filename too long) y advertencias sobre el cambio de fin de línea (LF will be replaced by CRLF). Este error se produjo especialmente en archivos generados automáticamente por Unity en la carpeta Library. Por esta razón, solo se incluyó el script principal y una captura en formato GIF del funcionamiento del proyecto.
 
 ---
 
