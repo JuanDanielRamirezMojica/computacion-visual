@@ -44,6 +44,53 @@ La animación se genera cuadro a cuadro y se almacena como un arreglo de imágen
 Cada cuadro de la animación incluye una visualización de la figura transformada y su **matriz de transformación** correspondiente.  
 El resultado es una animación clara del efecto compuesto de las transformaciones, ilustrando cómo se combinan y afectan a la figura.
 
+
+### Código relevante (Python)
+
+A continuación, se muestra un fragmento central del código utilizado para animar el hexágono 2D:
+
+```python
+def get_transformation_matrix(t):
+
+    if t < 4:
+        # Fase 1: Movimiento circular, rotación suave, escalamiento
+        scale = 1 + 0.5 * np.sin(t)   # La figura se expande y contrae, como si palpitara.
+        angle = t                     # El ángulo depende del tiempo. Va creciendo.
+
+        # Esto mueve el centro de la figura en un círculo de radio 2, a la mitad de velocidad (t/2):
+        tx = 2 * np.cos(t / 2)
+        ty = 2 * np.sin(t / 2)
+
+    else:
+        # Fase 2: Va más rápido, pero mantiene la posición final de Fase 1
+        scale = 1 + 0.2 * (t - 4)     # -4 para que la escala siga continua desde Fase 1
+        angle = 2 * (t - 4) + 4       # +4 para que la rotación siga continua desde Fase 1
+        tx, ty = fase2_offset         # Mantener la posición final de Fase 1
+
+    # Matriz de Escala (S)
+    S = np.array([
+        [scale, 0, 0],
+        [0, scale, 0],
+        [0, 0, 1]
+    ])
+
+    # Matriz de Rotación (R)
+    R = np.array([
+        [np.cos(angle), -np.sin(angle), 0],  # Calcula la nueva coordenada X del punto rotado
+        [np.sin(angle),  np.cos(angle), 0],  # Calcula la nueva coordenada Y del punto rotado
+        [0, 0, 1]
+    ])
+
+    # Matriz de Traslación (T)
+    T = np.array([
+        [1, 0, tx],
+        [0, 1, ty],
+        [0, 0, 1]
+    ])
+
+    return T @ R @ S  # Orden: primero escalar, luego rotar, luego trasladar
+```
+
 ---
 
 ## 2. Unity (Transformaciones en 3D)
@@ -127,6 +174,84 @@ La escena contiene dos objetos principales:
 
 La cámara está posicionada en perspectiva, apuntando al centro de la escena desde `[20, 20, 20]`, y se incluye un control de órbita (`OrbitControls`), permitiendo interactuar a las personas con la escena.
 
+
+### Código relevante (Three.js con React Three Fiber)
+
+A continuación, se muestran fragmentos del código que controlan las transformaciones geométricas del hexágono y la esfera animada. Se utilizaron combinaciones de **traslación**, **rotación**, **escalado** y **cambio de color** dinámico.
+
+#### `App.jsx`
+```jsx
+<Canvas camera={{ position: [20, 20, 20], fov: 80 }}>
+  <ambientLight intensity={0.5} />
+  <pointLight position={[10, 10, 10]} />
+  <Hexagon />
+  <ColoredSphere />
+  <OrbitControls />
+</Canvas>
+```
+
+#### `Hexagon.jsx`
+
+```jsx
+useFrame(({ clock }) => {
+  const t = clock.getElapsedTime()
+  const mesh = meshRef.current
+
+  // Movimiento circular en X y Z
+  const radius = 3
+  mesh.position.x = Math.sin(t * 0.8) * radius
+  mesh.position.z = Math.cos(t * 0.8) * radius
+
+  // Movimiento vertical (Y)
+  mesh.position.y = Math.sin(t * 2) * 1.5
+
+  // Rotación
+  mesh.rotation.y = t
+  mesh.rotation.z = t * 0.5
+
+  // Escalado dinámico en cada eje
+  const scaleX = 1.5 + 0.5 * Math.sin(t * 3)
+  const scaleY = 1.5 + 0.3 * Math.sin(t * 1.5)
+  const scaleZ = 1.5 + 0.2 * Math.sin(t * 2)
+  mesh.scale.set(scaleX, scaleY, scaleZ)
+
+  // Cambio de color dinámico usando HSL
+  const hue = (t * 40) % 360
+  mesh.material.color.setHSL(hue / 360, 1, 0.5)
+})
+
+// Geometría del hexágono como un cilindro de 6 lados
+const geometry = new THREE.CylinderGeometry(2, 2, 2, 6)
+```
+
+
+#### `ColoredSphere.jsx`
+```jsx
+useFrame(({ clock }) => {
+  const t = clock.getElapsedTime()
+  const mesh = meshRef.current
+
+  // Movimiento circular en XZ
+  const radius = 20
+  mesh.position.x = Math.sin(t * 2.5) * radius
+  mesh.position.z = Math.cos(t * 2.5) * radius
+
+  // Movimiento vertical en Y (de abajo hacia arriba)
+  mesh.position.y = Math.sin(t * 2) * 5
+
+  // Rotación
+  mesh.rotation.y = t * 0.5
+  mesh.rotation.z = t * 0.3
+
+  // Cambio de color periódico cada segundo
+  if (t - lastColorChangeTime > colorChangeInterval) {
+    lastColorChangeTime = t
+    colorIndex = (colorIndex + 1) % colors.length
+    mesh.material.color.set(colors[colorIndex])
+  }
+})
+
+```
 ---
 
 ## 4. Processing (2D / 3D)
@@ -150,3 +275,74 @@ En esta implementación se utiliza **Processing** en modo 3D (`P3D`) para animar
 
 El color de la figura también cambia dinámicamente usando `sin(t)` y `cos(t)`.
 
+
+### Código relevante 
+Este sketch en **Processing** genera una animación 3D de un hexágono con transformaciones geométricas: **rotación**, **traslación**, **escalado** y **cambio de color** dinámico. Además, exporta automáticamente un GIF de la animación usando la librería `gifAnimation`.
+
+```java
+import gifAnimation.*; // Librería para exportar GIF
+
+GifMaker gifExport;
+int frameLimit = 480; // Total de frames (~6 segundos a 60fps)
+
+float[][] vertices = new float[6][3];
+
+void setup() {
+  size(600, 600, P3D); // Canvas en 3D
+  frameRate(60);
+  
+  // Inicializar exportación de GIF
+  gifExport = new GifMaker(this, "Taller_1_processing_hexagono.gif");
+  gifExport.setRepeat(0);      // 0 = loop infinito
+  gifExport.setQuality(10);    // Calidad (1–255)
+  gifExport.setDelay(16);      // Delay entre frames en ms (~60fps)
+  
+  // Coordenadas de los vértices del hexágono en el plano XY
+  for (int i = 0; i < 6; i++) {
+    float angle = TWO_PI / 6 * i;
+    vertices[i][0] = cos(angle) * 100;  // X
+    vertices[i][1] = sin(angle) * 100;  // Y
+    vertices[i][2] = 0;                 // Z
+  }
+}
+
+void draw() {
+  background(#4a4e69); // Color de fondo
+  float t = millis() / 1000.0; // Tiempo en segundos
+  
+  // Transformaciones dinámicas
+  float escala = 1 + 0.3 * sin(t);         // Escalado oscilante
+  float angulo = t;                        // Rotación progresiva
+  float offsetX = 150 * sin(t / 2);        // Movimiento en X
+  float offsetY = 100 * cos(t / 3);        // Movimiento en Y
+
+  // Color dinámico (RGB)
+  float r = 150 + 100 * sin(t);
+  float g = 80;
+  float b = 200 + 50 * cos(t);
+  fill(r, g, b);
+  
+  // Aplicar transformaciones
+  translate(width / 2 + offsetX, height / 2 + offsetY); // Traslación
+  rotateX(angulo);   // Rotación en eje X
+  rotateY(angulo);   // Rotación en eje Y
+  scale(escala);     // Escalado
+
+  // Dibujar el hexágono
+  beginShape();
+  for (int i = 0; i < 6; i++) {
+    vertex(vertices[i][0], vertices[i][1], vertices[i][2]);
+  }
+  endShape(CLOSE);
+  
+  // Añadir frame al GIF
+  gifExport.addFrame();
+
+  // Finalizar exportación tras alcanzar el límite
+  if (frameCount == frameLimit) {
+    gifExport.finish();
+    println("GIF guardado");
+    noLoop();
+  }
+}
+```
