@@ -1,11 +1,17 @@
 <div align="justify">
 
-# 💻 computacion-visual 💻
+# 💻 Computacion Visual Grupo 2 - 2025 I💻
 
 Repositorio para el curso de Computación Visual, correspondiente al primer semestre de 2025.
 
 Este espacio contiene los talleres, prácticas y experimentos desarrollados a lo largo del curso, enfocados en la comprensión y aplicación de conceptos fundamentales de programación visual, transformaciones geométricas, animación en tiempo real y visualización interactiva en múltiples entornos de desarrollo.
 
+# 👨🏻‍💻 Estudiante 👨🏻‍💻
+
+- Juan Daniel Ramírez Mojica.
+- Ingeniería de Sistemas y Computación.
+- Facultad de Ingeniería.
+- Universidad Nacional de Colombia.
 
 
 ## 📂  Estructura del repositorio 📂
