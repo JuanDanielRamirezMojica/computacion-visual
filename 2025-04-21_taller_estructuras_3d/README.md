@@ -15,6 +15,7 @@ Se desarrolló una aplicación web utilizando **Vite**, **React Three Fiber** y 
 
 El modelo se obtuvo de: [ Vaso Reutilizable Starbucks - TurboSquid ](https://www.turbosquid.com/es/3d-models/vaso-reutilizable-starbucks-model-1872080)
 
+🔗 **[Ver implementación en el repositorio](https://github.com/JuanDanielRamirezMojica/computacion-visual/tree/main/2025-04-21_taller_estructuras_3d))**
 
 ### Funcionalidades implementadas:
 
