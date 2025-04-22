@@ -1,0 +1,59 @@
+# === Global ignores ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# === Node (Three.js con Vite) ===
+threejs/node_modules/
+threejs/dist/
+threejs/.env
+threejs/.vite/
+
+# === Python ===
+python/__pycache__/
+python/*.pyc
+python/.ipynb_checkpoints/
+python/.venv/
+python/venv/
+python/env/
+python/.env
+
+# Archivos generados
+python/*.gif
+python/*.mp4
+python/output/
+python/__pycache__/
+
+# === Unity ===
+unity/Library/
+unity/Temp/
+unity/Obj/
+unity/Build/
+unity/Builds/
+unity/Logs/
+unity/MemoryCaptures/
+unity/UserSettings/
+unity/.vs/
+unity/.idea/
+unity/*.csproj
+unity/*.unityproj
+unity/*.sln
+unity/*.suo
+unity/*.tmp
+unity/*.user
+unity/*.userprefs
+unity/*.pidb
+unity/*.booproj
+unity/*.svd
+unity/*.pdb
+unity/obj/
+unity/.vscode/
+
+# === Misc ===
+*.zip
+*.rar
+*.7z
+
+# === Jupyter Notebooks ===
+*.ipynb_checkpoints
