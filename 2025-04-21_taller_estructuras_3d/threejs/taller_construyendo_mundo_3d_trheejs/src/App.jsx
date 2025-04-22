@@ -107,13 +107,15 @@ function Loader() {
 
 // Componente del modelo con múltiples modos de visualización
 function Model({ mode, setModelInfo }) {
-  const obj = useLoader(OBJLoader, '/Vaso.obj')
+  const obj = useLoader(OBJLoader, '/Vaso.obj') // Ruta del modelo OBJ
   
   useEffect(() => {
     // Calcular información del modelo cuando se carga
     let vertexCount = 0
     let faceCount = 0
     let edgeCount = 0
+
+    // Recorrer los hijos del objeto para contar vértices, caras y aristas
 
     obj.traverse((child) => {
       if (child.isMesh) {
@@ -125,6 +127,7 @@ function Model({ mode, setModelInfo }) {
     })
 
     setModelInfo({
+      // Guardar información del modelo
       vertices: vertexCount,
       faces: faceCount,
       edges: Math.round(edgeCount)
@@ -199,6 +202,7 @@ function Model({ mode, setModelInfo }) {
 
 // Interfaz de usuario
 function Controls({ mode, setMode, modelInfo }) {
+ // Cambia el color del botón según el modo seleccionado
   return (
     <div style={{
       position: 'absolute',
@@ -210,8 +214,12 @@ function Controls({ mode, setMode, modelInfo }) {
       borderRadius: '5px',
       zIndex: 100
     }}>
+    
       <h3>Controles del Modelo</h3>
       <div>
+        
+        {/* Botones para cambiar el modo de visualización */}
+        {/* Cambia el color del botón según el modo seleccionado */}
         <button onClick={() => setMode('solid')} style={{background: mode === 'solid' ? '#45C4B0' : ''}}>Sólido</button>
         <button onClick={() => setMode('wireframe')} style={{background: mode === 'wireframe' ? '#45C4B0' : ''}}>Wireframe</button>
         <button onClick={() => setMode('vertices')} style={{background: mode === 'vertices' ? '#45C4B0' : ''}}>Vértices</button>
@@ -220,10 +228,10 @@ function Controls({ mode, setMode, modelInfo }) {
       
       {modelInfo && (
         <div style={{marginTop: '10px'}}>
-          <h4>Información del Modelo:</h4>
-          <p>Vértices: {modelInfo.vertices}</p>
-          <p>Caras: {modelInfo.faces}</p>
-          <p>Aristas: {modelInfo.edges}</p>
+          <h4>Información del Modelo:</h4> 
+          <p>Vértices: {modelInfo.vertices}</p> {/* Número de vértices */}
+          <p>Caras: {modelInfo.faces}</p> {/* Número de caras */}
+          <p>Aristas: {modelInfo.edges}</p>   {/* Número de aristas */}
         </div>
       )}
     </div>
@@ -242,7 +250,7 @@ export default function App() {
         shadows
         camera={{ position: [0, 0, 5], fov: 50 }}
       >
-        <color attach="background" args={['#45C4B0']} />
+        <color attach="background" args={['#45C4B0']} /> {/* Color de fondo */}
         <ambientLight intensity={0.5} />
         <directionalLight
           position={[10, 10, 5]}
@@ -252,8 +260,8 @@ export default function App() {
           shadow-mapSize-height={2048}
         />
         <Suspense fallback={<Loader />}>
-          <Model mode={mode} setModelInfo={setModelInfo} />
-          <OrbitControls 
+          <Model mode={mode} setModelInfo={setModelInfo} />   {/* Cargar el modelo */}
+          <OrbitControls                                        // Controlar la cámara
             enablePan={true}
             enableZoom={true}
             enableRotate={true}
