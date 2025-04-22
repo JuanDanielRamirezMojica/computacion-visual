@@ -1,5 +1,3 @@
-
-
 # Taller 1- Construyendo el Mundo 3D: Vértices, Aristas y Caras
 
 ## Objetivo del taller
@@ -9,23 +7,149 @@ Comprender las estructuras gráficas básicas que forman los modelos 3D (mallas 
 
 ## 1. Three.js con React Three Fiber
 
+
 ### Descripción:
-Se ha creado un proyecto con Vite y React Three Fiber, cargando un modelo 3D en formato `.OBJ`, `.STL` o `.GLTF`. El modelo es visualizado con OrbitControls, y se resalta la estructura (vértices, aristas o caras) utilizando efectos visuales como líneas (Edges, Wireframe) o puntos (Points).
 
-**Resultado:**
-- Modelo cargado correctamente en la escena.
-- Efectos visuales aplicados para resaltar las estructuras geométricas del modelo.
+Se desarrolló una aplicación web utilizando **Vite**, **React Three Fiber** y **Three.js**, cuyo objetivo principal es visualizar un modelo 3D (`Vaso.obj`) e identificar sus componentes fundamentales: vértices, aristas y caras. La escena incluye una cámara interactiva mediante `OrbitControls` y una interfaz para cambiar entre los distintos modos de visualización: **sólido**, **wireframe**, **vértices** y **bordes (edges)**. También se muestra información estructural básica del modelo como el número de vértices, caras y una estimación del número de aristas.
 
-**Tecnologías utilizadas:**
-- React Three Fiber
-- Three.js
-- Vite
 
-**Código relevante:**
+El modelo se obtuvo de: [ Vaso Reutilizable Starbucks - TurboSquid ](https://www.turbosquid.com/es/3d-models/vaso-reutilizable-starbucks-model-1872080)
+
+
+### Funcionalidades implementadas:
+
+-   Carga de modelo `.OBJ` desde la carpeta `public`.
+-   Visualización en diferentes modos:
+    -   **Sólido** (render clásico con material).
+    -   **Wireframe** (aristas únicamente).
+    -   **Vértices** (puntos blancos).
+    -   **Edges** (borde resaltado en amarillo + transparencia del modelo).
+        
+-   Interfaz flotante para cambiar entre modos.
+-   Cálculo y despliegue de información básica del modelo (vértices, caras, aristas).
+-   Indicador de carga del modelo (`% loaded`).
+-   Luces (ambientales y direccionales) y fondo personalizado.
+-   Estadísticas de renderizado (`<Stats />` de drei).
+    
+
+### Tecnologías utilizadas:
+
+-   Vite
+-   React
+-   React Three Fiber
+-   Drei
+-   Three.js
+    
+
+### Resultado
+
+![three.gif](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-04-21_taller_estructuras_3d/threejs/ModeloVasoGif1.gif?raw=true)
+
+
+![three.gif](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-04-21_taller_estructuras_3d/threejs/ModeloVasoGif2.gif?raw=true)
+
+
+Nota: Para facilitar la implementación de la visualización 3D, en el punto:
+* Resaltar vértices, aristas o caras usando efectos visuales como líneas (Edges, Wireframe) o puntos (Points).
+* Bonus: crear una pequeña interfaz para cambiar entre visualización de vértices/aristas/caras y mostrar información básica del modelo (número de vértices, etc.).
+
+se utilizaron sugerencias de código generadas con la ayuda de DeepSeek, medeiante el siguiente prompt: "De acuerdo a este código (CÓDIGO) cómo implementarías una pequeña interfaz para cambiar entre visualización de vértices/aristas/caras y mostrar información básica del modelo." la respuesta se adaptó al código que ya se tenía.
+
+### Código relevante:
+
 ```jsx
-<Canvas camera={{ position: [20, 20, 20], fov: 80 }}>
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-</Canvas>
+// ________________________ MÍ CÓDIGO ________________________
+
+// React nos da Suspense para cargar componentes de forma elegante
+import { Suspense, useState, useEffect } from 'react'
+// El lienzo donde vivirá nuestro mundo 3D
+import { Canvas } from '@react-three/fiber'
+// OrbitControls - Para mover la cámara con el mouse
+// useProgress - Para saber cuánto ha cargado el modelo
+// Html - Para mostrar contenido HTML en la escena 3D
+import { OrbitControls, useProgress, Html, Stats } from '@react-three/drei'
+// Importar modelos en formato OBJ
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+// Cargar modelos y texturas
+import { useLoader } from '@react-three/fiber'
+// Biblioteca hace todo el trabajo 3D
+import * as THREE from 'three'
+
+// Componente de carga
+function Loader() {
+  const { progress } = useProgress()
+  return <Html center>{progress} % loaded</Html>
+}
+
+// Componente del modelo con múltiples modos de visualización
+function Model({ mode, setModelInfo }) {
+  const obj = useLoader(OBJLoader, '/Vaso.obj') // Ruta del modelo OBJ
+  
+  useEffect(() => {
+    // Calcular información del modelo cuando se carga
+    let vertexCount = 0
+    let faceCount = 0
+    let edgeCount = 0
+
+    // Recorrer los hijos del objeto para contar vértices, caras y aristas
+    obj.traverse((child) => {
+      if (child.isMesh) {
+        vertexCount += child.geometry.attributes.position.count
+        faceCount += child.geometry.index ? child.geometry.index.count / 3 : 0
+        // Estimación de aristas (3 por cada cara triangular)
+        edgeCount += faceCount * 3 / 2 // Aproximación
+      }
+    })
+
+    // Guardar información del modelo
+    setModelInfo({
+      vertices: vertexCount,
+      faces: faceCount,
+      edges: Math.round(edgeCount)
+    })
+  }, [obj, setModelInfo])
+
+  return (
+    <>
+      {obj.children.map((child, index) => {
+        if (!child.isMesh) return null
+        
+        const geometry = child.geometry
+        
+        // Modo normal (caras sólidas)
+        if (mode === 'solid') {
+          return (
+            <mesh key={index} geometry={geometry}>
+              <meshStandardMaterial 
+                color="#c0c0c0"
+                roughness={0.7}
+                metalness={0.3}
+                side={THREE.DoubleSide}
+              />
+            </mesh>
+          )
+        }
+        
+        // Modo wireframe (solo aristas)
+        if (mode === 'wireframe') {
+          return (
+            <lineSegments key={index} geometry={new THREE.WireframeGeometry(geometry)}>
+              <lineBasicMaterial color="white" linewidth={1} />
+            </lineSegments>
+          )
+        }
+        
+        // Modo vértices (puntos)
+        if (mode === 'vertices') {
+          return (
+            <points key={index} geometry={geometry}>
+              <pointsMaterial color="white" size={0.05} sizeAttenuation={true} />
+            </points>
+          )
+        }
+
+
+
 ```
 
 
