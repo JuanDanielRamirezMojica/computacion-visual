@@ -1,5 +1,5 @@
 
-# Taller 1 – Computación Visual  
+# Taller 0 – Computación Visual  
 **Transformaciones Geométricas en Diferentes Entornos**
 
 ## Introducción
