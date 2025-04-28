@@ -158,21 +158,119 @@ function Model({ mode, setModelInfo }) {
 
 ### Descripción:
 
-En Unity se creó una escena 3D donde se importó un archivo `.OBJ` o `.STL` y se creó un script en C# para imprimir el número de vértices, triángulos y sub-mallas del modelo. También se implementó la visualización de aristas en modo wireframe.
+En Unity se creó una escena 3D donde se importó un archivo .OBJ (modelo de un vaso).
+Se desarrolló un script en C# llamado MeshInfoDisplay.cs que:
+
+Imprime en consola el número de vértices, triángulos y sub-mallas (submeshes) del modelo cargado.
+
+Dibuja las aristas del modelo usando Gizmos en el modo Scene View (simulando una vista wireframe).
 
 **Resultado:**
 
--   Importación exitosa del modelo 3D.
--   Funcionalidad para visualizar el modelo en modo wireframe.
-    
+- Importación correcta y lectura estructural del modelo.
 
-**Tecnologías utilizadas:**
+- Visualización de las aristas en la vista de escena de Unity (Scene View).
 
--   Unity 3D
--   C#
-    
-**Código relevante:**
+- Conteo correcto de vértices, triángulos y sub-mallas.
+
+   
+---
+
+### Consideraciones importantes:
+
+Inicialmente, al intentar leer los datos de la malla (`vertices` y `triangles`), se presentó el error:
+
+> **Not allowed to access triangles/indices on mesh 'default Instance' (isReadable is false; Read/Write must be enabled in import settings)**
+
+Para solucionarlo fue necesario **activar la opción "Read/Write Enabled" en las propiedades de importación del modelo** siguiendo estos pasos:
+
+1. **Seleccionar el modelo** (`.OBJ`, `.STL`, `.FBX`) en el panel `Project`.
+2. En el `Inspector`, ir a la pestaña `Model`.
+3. Buscar y **activar** la opción **"Read/Write Enabled"** .
+4. Presionar **Apply** para guardar los cambios.
+
+Esto permite a Unity acceder a los vértices y triángulos desde código, necesarios para el conteo y visualización.
+
+🔗 **[Ver implementación en el repositorio](https://github.com/JuanDanielRamirezMojica/computacion-visual/tree/main/2025-04-21_taller_estructuras_3d)**
+---
+
+### Tecnologías utilizadas:
+
+- Unity 2022
+- Lenguaje C#
+
+---
+
+### Resultado visual:
+
+![unity.gif](https://raw.githubusercontent.com/JuanDanielRamirezMojica/computacion-visual/refs/heads/main/2025-04-21_taller_estructuras_3d/unity/Gif%20Unity.gif)
+
+
+---
+
+### Código relevante:
+
 ```
+
+
+[RequireComponent(typeof(MeshFilter))]
+public class MeshInfoDisplay : MonoBehaviour
+{
+    private Mesh mesh; // Var para almacenar el mesh del objeto.
+
+    void Start()
+    {
+        //Obtiene el mesh desde el MeshFilter del objeto.
+        mesh = GetComponent<MeshFilter>().mesh;
+
+        // Imprime en CONSOLA el número de vértices, triángulos y submeshes.
+        Debug.Log($"Vertices: {mesh.vertexCount}");
+        Debug.Log($"Triangles: {mesh.triangles.Length / 3}");
+        Debug.Log($"Submeshes: {mesh.subMeshCount}");
+    }
+
+    void OnDrawGizmos()
+
+    // Se usa Gizmos para dibujar un wireframe (permite dibujar cosas en el editor)
+    {
+
+        // Si aún no se ha asigna el mesh, se pone del MeshFilter.
+        if (mesh == null)
+            mesh = GetComponent<MeshFilter>()?.sharedMesh;
+
+        // Si encuentra un mesh, dibuja als aristas.
+        if (mesh != null)
+        {
+            Gizmos.color = Color.green; // Color de las líneas.
+
+            //Iterar todas las aristas y dibuja líneas entre los vértices.
+            foreach (var edge in GetEdges(mesh))
+            {
+                // Transformamos las posiciones locales a posiciones globales. Porque gismo las pide globales.
+                Gizmos.DrawLine(transform.TransformPoint(edge.Item1), transform.TransformPoint(edge.Item2));
+            }
+        }
+    }
+
+    //Obtener aristas del mesh como pares de vértices:
+    private System.Collections.Generic.List<(Vector3, Vector3)> GetEdges(Mesh m)
+    {
+        var edges = new System.Collections.Generic.List<(Vector3, Vector3)>();
+        var triangles = m.triangles; // Array --> define los triángulos mediante índices a vértices.
+        var vertices = m.vertices;   // Array --> posiciones de los vértices.
+
+      
+        // Cada triángulo está compuesto por 3 índices consecutivos en el array de triángulos.
+        for (int i = 0; i < triangles.Length; i += 3)
+        {
+            //Se agregan las 3 aristas de cada triángulo.
+            edges.Add((vertices[triangles[i]], vertices[triangles[i + 1]]));
+            edges.Add((vertices[triangles[i + 1]], vertices[triangles[i + 2]]));
+            edges.Add((vertices[triangles[i + 2]], vertices[triangles[i]]));
+        }
+        return edges;
+    }
+}
 
 ```
 
