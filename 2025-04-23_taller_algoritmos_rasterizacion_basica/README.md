@@ -210,7 +210,7 @@ La parte más interesante fue notar cómo el algoritmo de Bresenham, a pesar de 
 
 ### ✅ Checklist de Entrega
 
--   ✅ Carpeta `2025-05-04_taller_algoritmos_rasterizacion_basica`
+-   ✅ Carpeta `2025-04-23_taller_algoritmos_rasterizacion_basica`
     
 -   ✅ Código limpio y funcional
     
