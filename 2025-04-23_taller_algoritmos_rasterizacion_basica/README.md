@@ -194,7 +194,9 @@ def fill_triangle(p1, p2, p3):
 
 ### 🧩 Prompts Usados
 
-_No se utilizaron prompts generativos en este taller, ya que fue puramente algorítmico y programático._
+Para el readme se utilizó:
+
+_Mejora la redacción de estos parrafos(...)._
 
 ----------
 
@@ -202,7 +204,7 @@ _No se utilizaron prompts generativos en este taller, ya que fue puramente algor
 
 Este taller me permitió entender cómo funcionan internamente los sistemas gráficos cuando dibujan formas básicas. Implementar cada algoritmo desde cero fue una oportunidad para apreciar la optimización detrás de operaciones tan simples como dibujar una línea o un círculo.
 
-La parte más interesante fue notar cómo el algoritmo de Bresenham, a pesar de no usar operaciones de punto flotante, logra resultados visuales muy precisos. El rellenado del triángulo también implicó comprender bien la interpolación de coordenadas y manejar los casos de borde. En futuros proyectos, me gustaría aplicar estos conocimientos para construir un renderizador 2D más complejo que soporte múltiples primitivas y capas de dibujo.
+La parte más interesante fue notar cómo el algoritmo de Bresenham, a pesar de no usar operaciones de punto flotante, logra resultados precisos. En un fututo, me gustaría aplicar estos conocimientos para construir un renderizador 2D más complejo que soporte múltiples primitivas y capas de dibujo.
 
 ----------
 
