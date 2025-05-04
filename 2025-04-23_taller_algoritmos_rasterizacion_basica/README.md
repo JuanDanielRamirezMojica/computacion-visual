@@ -1,7 +1,7 @@
 # Taller 6 - Rasterización desde Cero: Dibujando con Algoritmos Clásicos
 
 📅 Fecha  
-**2025-04-23** – Fecha de realización del taller
+**2025-04-23** – Fecha de asignación
 
 ----------
 
