@@ -166,7 +166,18 @@ for i, cnt in enumerate(contornos):
   #### 9. GIF:
 ![Imagen  GIF animado](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-04-23_taller_analisis_figuras_geometricas/resultados/analisis_figuras_geometricas.gif?raw=true) 
 
- 
+
+
+
+
+- [Figura 1] Tipo: Triángulo, Área: 4731.50, Perímetro: 331.75, Centroide: (415,429)
+- [Figura 2] Tipo: Hexágono, Área: 4200.00, Perímetro: 249.71, Centroide: (150,350)
+- [Figura 3] Tipo: Círculo, Área: 5030.00, Perímetro: 266.11, Centroide: (400,300)
+- [Figura 4] Tipo: Triángulo, Área: 5000.00, Perímetro: 341.42, Centroide: (249,266)
+- [Figura 5] Tipo: Círculo, Área: 7704.00, Perímetro: 329.71, Centroide: (400,100)
+- [Figura 6] Tipo: Cuadrado, Área: 10000.00, Perímetro: 400.00, Centroide: (100,100)
+
+
 🧩 Prompts Usados
 
 -   "Mejora la redacción de estos parrafos(...)."
