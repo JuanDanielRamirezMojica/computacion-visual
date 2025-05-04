@@ -36,25 +36,42 @@ Detectar formas simples (círculos, cuadrados, triángulos) en imágenes binariz
 -   Google Colab
     
 
-📁 Estructura del Proyecto 
+### 📁 Estructura del Proyecto 
 
 2025-04-23_taller_analisis_figuras_geometricas/
+
 ├── python/
+
 │   └── analisis_figuras_geometricas.ipynb
+
 ├── resultados/
+
 │   ├── analisis_figuras_geometricas.gif
+
 │   ├── circuloOpen.png
+
 │	  ├── circuloPuntoMedio.png
+
 │   ├── contornos.png
+
 │   ├── cuadrado.png
+
 │   ├── hexagono.png
+
 │   ├── lienzoblanco.png
+
 │   ├── triangulo.png
+
 │   ├── trianguloRaste.png
+
 ├── README.md
 
 
-🧪 Implementación
+
+
+
+
+### 🧪 Implementación
 
 🔹 Etapas realizadas
 
