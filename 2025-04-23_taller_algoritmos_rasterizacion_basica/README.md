@@ -2,6 +2,7 @@
 
 📅 Fecha  
 **2025-04-23** – Fecha de asignación
+**2025-05-02**– Fecha de entrega
 
 ----------
 
