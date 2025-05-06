@@ -1,17 +1,23 @@
 # Taller 9 - Escenas Paramétricas: Creación de Objetos desde Datos
 
-📅 Fechas
+### 📅 Fechas
 
 - **2025-04-23** – Fecha de asignación 
 - **2025-05-05**– Fecha de entrega
 
 
-🎯 Objetivo del Taller
+
+### 🔹 Actividades por entorno
+
+Este taller se puede desarrollar en dos o mas de los entornos, todos mediante generación de objetos en tiempo real y parametrización desde datos.
+
+
+### 🎯 Objetivo del Taller
 
 Generar objetos 3D de manera programada a partir de listas de coordenadas o datos estructurados. El propósito es entender cómo crear geometría en tiempo real y de forma flexible mediante código, utilizando bucles, estructuras condicionales y exportando o renderizando las escenas generadas.
 
 
-🧠 Conceptos Aprendidos
+### 🧠 Conceptos Aprendidos
 
 -   Generación de objetos 3D desde listas
     
@@ -22,7 +28,7 @@ Generar objetos 3D de manera programada a partir de listas de coordenadas o dato
 -   Interacción mediante interfaz gráfica en Unity
     
 
-🔧 Herramientas y Entornos
+### 🔧 Herramientas y Entornos
 
 -   Unity (2022.3 LTS)
     
@@ -37,7 +43,7 @@ Generar objetos 3D de manera programada a partir de listas de coordenadas o dato
 -  Three.js con React Three Fiber
     
 
-📁 Estructura del Proyecto
+### 📁 Estructura del Proyecto
 
 ```
 2025-04-23_taller_escenas_parametricas/
