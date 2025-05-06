@@ -1,5 +1,14 @@
 # Taller 4 - Segmentando el Mundo: Binarización y Reconocimiento de Formas
 
+
+
+📅 Fechas
+
+- **2025-04-21** – Fecha de asignación 
+
+- **2025-05-05**– Fecha de entrega
+
+
 ## Objetivo del taller
 
 Aplicar técnicas básicas de segmentación en imágenes mediante umbralización y detección de formas simples. El objetivo es comprender cómo identificar regiones de interés en imágenes mediante procesos de binarización y análisis morfológico.
