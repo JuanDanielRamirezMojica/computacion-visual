@@ -1,7 +1,52 @@
 # Taller 1- Construyendo el Mundo 3D: Vértices, Aristas y Caras
 
-## Objetivo del taller
+
+📅 Fechas
+
+- **2025-04-21** – Fecha de asignación 
+
+- **2025-05-05**– Fecha de entrega
+
+  
+### Objetivo del taller
 Comprender las estructuras gráficas básicas que forman los modelos 3D (mallas poligonales) y visualizar su estructura en distintas plataformas. Se explorará la diferencia entre vértice, arista y cara, así como el contenido de formatos de archivo estándar de malla como `.OBJ`, `.STL` y `.GLTF`.
+
+
+### Conceptos Aprendidos
+- Visualización de mallas 3D
+- Estructuras gráficas: vértices, aristas y caras
+- Formatos de archivos 3D (.OBJ, .STL, .GLTF)
+- Interacción con escenas 3D
+- Estimación de propiedades geométricas
+- Uso de Gizmos en Unity
+- Visualización científica con vedo y trimesh
+
+
+### Herramientas y Entornos
+- Three.js / React Three Fiber (Vite, Drei)
+- Unity 2022 LTS (C#)
+- Python (trimesh, vedo, matplotlib)
+- Jupyter / Google Colab
+
+
+
+### 📁 Estructura del Proyecto
+```
+yyyy-mm-dd_taller_estructuras_3d/
+├── python/
+├── unity/
+├── threejs/
+├── README.md
+```
+
+
+### Implementación
+🔹 Etapas realizadas
+- Preparación de la escena: carga del modelo en cada entorno.
+- Visualización estructural: mostrar vértices, caras y aristas con distintos efectos.
+- Extracción de información: conteo de elementos estructurales.
+- Interacción: creación de interfaces para alternar entre modos o mostrar resultados.
+
 
 ---
 
