@@ -1,5 +1,13 @@
 # Taller 5 - De Pixels a Coordenadas: Explorando la Imagen como Matriz
 
+
+📅 Fechas
+
+- **2025-04-21** – Fecha de asignación 
+
+- **2025-05-05**– Fecha de entrega
+
+
 ## Objetivo del taller
 
 Comprender cómo se representa una imagen digital como una matriz numérica y manipular sus componentes a nivel de píxel. Se abordará cómo trabajar con los valores de color y brillo directamente, accediendo a regiones específicas de la imagen para su análisis o modificación.
