@@ -1,6 +1,13 @@
 
 # Taller 2 - Jerarquías y Transformaciones: El Árbol del Movimiento
 
+📅 Fechas
+
+- **2025-04-21** – Fecha de asignación 
+
+- **2025-05-05**– Fecha de entrega
+
+  
 ## Objetivo del taller
 Aplicar estructuras jerárquicas y árboles de transformación para organizar escenas y simular movimiento relativo entre objetos. Se busca comprender cómo las transformaciones afectan a los nodos hijos en una estructura padre-hijo y cómo visualizar estos efectos en tiempo real.
 
