@@ -1,5 +1,14 @@
 # Taller 3 - Ojos Digitales: Introducción a la Visión Artificial
 
+
+
+📅 Fechas
+
+- **2025-04-21** – Fecha de asignación 
+
+- **2025-05-05**– Fecha de entrega
+
+
 ## Objetivo del taller
 
 Entender los fundamentos de la percepción visual artificial mediante imágenes en escala de grises, filtros y detección básica de bordes. Se trabajará con OpenCV para explorar cómo los computadores interpretan imágenes visuales básicas.
