@@ -38,12 +38,15 @@ Generar objetos 3D de manera programada a partir de listas de coordenadas o dato
     
 
 📁 Estructura del Proyecto
+
+```
 2025-04-23_taller_escenas_parametricas/
 ├── python/
 ├── unity/
 ├── threejs/
 ├── resultados/
 ├── README.md
+```
 
 🧪 Implementación
 
