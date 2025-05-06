@@ -1,8 +1,10 @@
 # Taller 10 - Filtro Visual: Convoluciones Personalizadas
 
 📅 Fecha  
+
 **2025-04-23** – Fecha de asignación
-**2025-05-02**– Fecha de entrega
+
+**2025-05-05**– Fecha de entrega
 
 ----------
 
