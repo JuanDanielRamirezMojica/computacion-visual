@@ -1,8 +1,10 @@
 # Taller 7 - Análisis de Figuras Geométricas: Centroide, Área y Perímetro
 
 📅 Fechas
+
 **2025-04-23** – Fecha de asignación
-**2025-05-02**– Fecha de entrega
+
+**2025-05-05**– Fecha de entrega
 
 🎯 Objetivo del Taller:
 Detectar formas simples (círculos, cuadrados, triángulos) en imágenes binarizadas y calcular propiedades geométricas como área, perímetro y centroide. El objetivo es desarrollar habilidades para extraer métricas relevantes de contornos detectados en imágenes procesadas.
