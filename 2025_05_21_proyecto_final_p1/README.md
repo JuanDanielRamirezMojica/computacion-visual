@@ -83,13 +83,6 @@ Explorar el flujo de trabajo completo desde la reconstrucción 3D con COLMAP has
     -   Ajustes de escala, rotación, limpieza y texturizado
         
 
-#### 🔹 Código relevante
-
-`# Limpieza con Open3D  import open3d as o3d
-
-pcd = o3d.io.read_point_cloud("modelo.ply")
-pcd_clean, ind = pcd.remove_radius_outlier(nb_points=16, radius=0.05)
-o3d.io.write_point_cloud("modelo_limpio.ply", pcd_clean)` 
 
 ----------
 
