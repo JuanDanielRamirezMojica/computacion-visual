@@ -345,7 +345,10 @@ sketch
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-
+unity/Library/
+unity/Temp/
+unity/Logs/
+unity/obj/
 libburst-llvm-15.dylib
 
 
