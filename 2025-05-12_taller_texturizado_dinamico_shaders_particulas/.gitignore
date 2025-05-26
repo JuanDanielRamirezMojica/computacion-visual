@@ -346,6 +346,9 @@ sketch
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+libburst-llvm-15.dylib
+
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
