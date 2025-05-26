@@ -124,9 +124,11 @@ else:
 ```
 ## 📊 Resultados Visuales
 
+### 🧠 Activación cerebral con EEG Eye State
+
 ![Imagen  GIF animado](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_bci_simulado_control_visual/python/GifPython.gif?raw=true)
 
-### 🧠 Activación cerebral con EEG Eye State
+
 
 
 
