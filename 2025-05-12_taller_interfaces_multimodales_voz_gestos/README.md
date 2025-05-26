@@ -1,6 +1,11 @@
-# 🧪 Taller - Interfaces Multimodales: Uniendo Voz y Gestos
+# 🧪 Taller 24- Interfaces Multimodales: Uniendo Voz y Gestos
 
 ## 📅 Fecha
+
+2025-05-12 – Fecha de asignación
+
+2025-05-25 – Fecha de realización
+
 2025-05-26 – Fecha de entrega
 ---
 
