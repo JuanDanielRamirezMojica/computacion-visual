@@ -43,6 +43,7 @@ Crear materiales que cambien en tiempo real en respuesta a entrada del usuario, 
 2025-05-12_taller_texturizado_dinamico_shaders_particulas/
 ├── unity/
 ├── threejs/
+├── resultados/
 ├── README.md
 
 ```
