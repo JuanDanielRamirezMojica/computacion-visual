@@ -7,6 +7,7 @@
 2025-05-25 – Fecha de realización
 
 2025-05-26 – Fecha de entrega
+
 ---
 
 ## 🎯 Objetivo del Taller
