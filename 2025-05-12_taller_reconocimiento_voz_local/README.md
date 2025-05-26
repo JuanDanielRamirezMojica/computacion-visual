@@ -1,7 +1,9 @@
 # 🧪 Taller 23- Voz al Código: Comandos por Reconocimiento de Voz Local
 
 📅 Fecha  
-2025-05-12 – Fecha de entrega
+
+2025-05-12 – Fecha de asignación
+
 2025-05-26 – Fecha de entrega
 
 ---
