@@ -1,7 +1,12 @@
 # 🧪 Taller 66 – Optimización Gráfica en Three.js
 
 ## 📅 Fecha  
-2025-05-26 – Fecha de realización
+
+2025-05-12 – Fecha de asignación
+
+2025-05-25 – Fecha de realización
+
+2025-05-26 – Fecha de entrega
 
 ---
 
