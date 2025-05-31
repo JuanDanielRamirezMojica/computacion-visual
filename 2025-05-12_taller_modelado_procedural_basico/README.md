@@ -1,7 +1,12 @@
 # 🧪 Modelado Procedural Básico: Geometría desde Código
 
 ## 📅 Fecha
-`2025-05-26` – Fecha de entrega 
+
+2025-05-12 – Fecha de asignación
+
+2025-05-25 – Fecha de realización
+
+2025-05-26 – Fecha de entrega
 
 ---
 
@@ -113,4 +118,19 @@ Utilicé un total de 4 prompts principales que sirvieron como guía para este ta
 ## 🧪 (Parte 5) Comentario final: ¿cómo se diferencia modelar con código vs modelar a mano?
 
 Comprendo que al utilizar código se pueden generar mundos más extensos con menor esfuerzo, pero considero que este enfoque puede sacrificar cierto nivel de detalle durante la expansión del mundo. Creo que la solución ideal sería combinar ambos métodos, ya que si contáramos con una variedad suficiente de objetos base bien diseñados, su implementación procedural evitaría que el resultado final pareciera demasiado mecánico o repetitivo, mejorando significativamente la calidad visual.
+
+---
+
+## 👥 Integrantes
+
+-   Sebastián Muñoz → jumunozle@unal.edu.co
+    
+-   Carlos Camacho → cacamacho@unal.edu.co
+    
+-   Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+    
+-   Cristian Medina → crmedinab@unal.edu.co
+    
+
+
 
