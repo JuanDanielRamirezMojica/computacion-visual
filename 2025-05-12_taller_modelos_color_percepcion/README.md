@@ -1,4 +1,4 @@
-# 🧪 Explorando el Color: Percepción Humana y Modelos Computacionales
+# 🧪 Taller 11 - Explorando el Color: Percepción Humana y Modelos Computacionales
 
 ## 📅 Fecha
 `2025-05-26` – Fecha de entrega 
