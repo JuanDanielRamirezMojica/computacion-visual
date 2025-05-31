@@ -1,4 +1,4 @@
-# 🧪 Modelado Procedural Básico: Geometría desde Código
+# 🧪 Taller 14 - Modelado Procedural Básico: Geometría desde Código
 
 ## 📅 Fecha
 
@@ -22,7 +22,7 @@ En el taller, se usa una matriz para colocar bloques y simular una ciudad. Inves
 
 > ✅ En el siguiente GIF se observa un objeto vacío al que se le ha asignado un script. Este script genera automáticamente un conjunto de bloques de diferentes tamaños, así como torres cilíndricas distribuidas alrededor del mismo.
 
-![Creando bloques por codigo](Gif/UnityTaller14.gif)
+![Creando bloques por codigo](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_modelado_procedural_basico/gif/UnityTaller14.gif?raw=true)
 
 ---
 
