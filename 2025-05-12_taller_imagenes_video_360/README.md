@@ -1,7 +1,14 @@
-# 🧪 Visualización de Imágenes y Video 360° en Unity
+# 🧪 Taller 15 - Visualización de Imágenes y Video 360° en Unity
 
 ## 📅 Fecha
-`2025-05-26` – Fecha de entrega 
+
+
+2025-05-12 – Fecha de asignación
+
+2025-05-25 – Fecha de realización
+
+2025-05-26 – Fecha de entrega
+
 
 ---
 
@@ -21,11 +28,11 @@ Aunque se intentó seguir el tutorial del taller, no conseguí rotar la escala d
 
 > ✅ Primero mostraremos la imagen 360.
 
-![Cargar Imagen 360°](Gif/UnityTaller15A.gif)
+![Cargar Imagen 360°](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_imagenes_video_360/gif/UnityTaller15A.gif?raw=true)
 
 > ✅ Segundo, mostraremos el video 360. Como es un video de una playa, el cambio no es drástico, pero podrán notar el movimiento de las olas y las nubes a lo largo del tiempo, lo que confirma que se trata de un video.
 
-![Cargar Video 360°](Gif/UnityTaller15B.gif)
+![Cargar Video 360°](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_imagenes_video_360/gif/UnityTaller15B.gif?raw=true)
 
 ---
 ## 🔧 (Parte 3) Código relevante explicado.
