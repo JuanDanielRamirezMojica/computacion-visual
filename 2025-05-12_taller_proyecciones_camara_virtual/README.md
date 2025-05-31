@@ -1,7 +1,12 @@
-# 🧪 Proyecciones 3D: Cómo ve una Cámara Virtual
+# 🧪 Taller 12 - Proyecciones 3D: Cómo ve una Cámara Virtual
 
 ## 📅 Fecha
-`2025-05-26` – Fecha de entrega 
+
+2025-05-12 – Fecha de asignación
+
+2025-05-25 – Fecha de realización
+
+2025-05-26 – Fecha de entrega
 
 ---
 
