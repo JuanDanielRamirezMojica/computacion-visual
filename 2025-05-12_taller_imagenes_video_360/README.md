@@ -98,3 +98,16 @@ Tanto la imagen como el video se cargaron mediante código, utilizando las herra
 El siguiente video ayuda a una rápida implementación, pero hay que pausarlo con frecuencia porque no explica los detalles con profundidad
 
 - https://www.youtube.com/watch?v=1Fupk75GhHg
+
+----------
+
+## 👥 Integrantes
+
+-   Sebastián Muñoz → jumunozle@unal.edu.co
+    
+-   Carlos Camacho → cacamacho@unal.edu.co
+    
+-   Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+    
+-   Cristian Medina → crmedinab@unal.edu.co
+    
