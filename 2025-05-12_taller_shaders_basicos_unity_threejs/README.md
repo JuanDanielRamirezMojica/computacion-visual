@@ -1,7 +1,12 @@
 # 🧪 Sombras Personalizadas: Primeros Shaders en Unity
 
 ## 📅 Fecha
-`2025-05-26` – Fecha de entrega 
+
+2025-05-12 – Fecha de asignación
+
+2025-05-25 – Fecha de realización
+
+2025-05-26 – Fecha de entrega
 
 ---
 
@@ -21,7 +26,7 @@ Un Shader es un pequeño programa que le dice a la GPU (tarjeta gráfica) cómo 
 
 Para ver mas claramente esto se colocan dos objetos 3d juntos uno tiene los shader modificados y el otro no 
 
-![Shader en unity](Gif/UnityTaller20.gif)
+![Shader en unity](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_shaders_basicos_unity_threejs/gif/UnityTaller20.gif?raw=true)
 
 ---
 
@@ -107,6 +112,19 @@ Shader "Custom/PositionTimeShader"
     }
 }
 ```
+
+
+
+## 👥 Integrantes
+
+-   Sebastián Muñoz → jumunozle@unal.edu.co
+    
+-   Carlos Camacho → cacamacho@unal.edu.co
+    
+-   Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+    
+-   Cristian Medina → crmedinab@unal.edu.co
+    
 
 ---
 
