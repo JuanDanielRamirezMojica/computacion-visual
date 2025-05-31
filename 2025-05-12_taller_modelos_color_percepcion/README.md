@@ -96,3 +96,17 @@ Realmente use mas la ia para la parte de Unity sobre todo para el script sobre c
 ## 📊 (Parte 6) Reflexión sobre el impacto visual de las simulaciones y diferencias de percepción.
 
 Me gustó la idea de usar diferentes formatos de color para simular ciertos efectos, como un panorama más oscuro o el tono sepia. Primero, convertir la imagen a RGB, luego transformarla a un formato que permita modificar fácilmente los parámetros deseados (como HSV o CIE Lab), ajustar los valores necesarios y finalmente volver a RGB. ¡Me pareció una solución muy interesante!
+
+
+---
+
+## 👥 Integrantes
+
+-   Sebastián Muñoz → jumunozle@unal.edu.co
+    
+-   Carlos Camacho → cacamacho@unal.edu.co
+    
+-   Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+    
+-   Cristian Medina → crmedinab@unal.edu.co
+    
