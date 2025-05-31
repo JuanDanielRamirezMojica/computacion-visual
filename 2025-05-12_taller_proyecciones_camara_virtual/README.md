@@ -116,6 +116,22 @@ Esencia técnica:
 
 - Integración UI/parámetros de cámara
 
+
+
+---
+
+## 👥 Integrantes
+
+-   Sebastián Muñoz → jumunozle@unal.edu.co
+    
+-   Carlos Camacho → cacamacho@unal.edu.co
+    
+-   Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+    
+-   Cristian Medina → crmedinab@unal.edu.co
+    
+
+
 ---
 
 ## 🧪 Reflexión sobre cómo la cámara transforma la escena desde una matriz 4x4 hasta la imagen final.
