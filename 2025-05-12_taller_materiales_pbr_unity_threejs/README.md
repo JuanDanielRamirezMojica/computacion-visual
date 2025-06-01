@@ -1,25 +1,25 @@
-🧪 Taller - Materiales Realistas: Introducción a PBR en Unity y Three.js
+# 🧪 Taller - Materiales Realistas: Introducción a PBR en Unity y Three.js
 
-📅 Fecha
+## 📅 Fecha
 2025-05-31 – Fecha de entrega
 
-🎯 Objetivo del Taller
+## 🎯 Objetivo del Taller
 Explorar los principios del renderizado basado en física (PBR) y aplicarlos a modelos 3D para mejorar su realismo visual, comparando cómo la luz interactúa con diferentes tipos de materiales y cómo las texturas afectan el resultado final.
 
-🧠 Conceptos Aprendidos
+## 🧠 Conceptos Aprendidos
 - Fundamentos de Physically-Based Rendering (PBR)
 - Uso de mapas de texturas (albedo, roughness, normal)
 - Interacción luz-material en gráficos 3D
 - Configuración de materiales en Three.js/React Three Fiber
 - Controles interactivos para ajuste en tiempo real
 
-🔧 Herramientas y Entornos
+## 🔧 Herramientas y Entornos
 - Three.js con React Three Fiber
 - Leva para controles interactivos
 - @react-three/drei para utilidades
 - Visual Studio Code como editor
 
-📁 Estructura del Proyecto
+## 📁 Estructura del Proyecto
 2025-05-31_taller_materiales_pbr_threejs/
 ├── threejs/
 │   ├── public/textures/ (albedo.jpg, normal.jpg, roughness.jpg)
@@ -28,7 +28,7 @@ Explorar los principios del renderizado basado en física (PBR) y aplicarlos a m
 │   ├── resultados_basicos.gif
 └── README.md
 
-🧪 Implementación
+## 🧪 Implementación
 
 🔹 Etapas realizadas
 1. Configuración de escena básica con luces y geometrías
@@ -36,6 +36,9 @@ Explorar los principios del renderizado basado en física (PBR) y aplicarlos a m
 3. Implementación de MeshStandardMaterial con mapas PBR
 4. Creación de controles interactivos con Leva
 5. Comparación con material básico (MeshBasicMaterial)
+
+
+![Imagen  GIF animado](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_materiales_pbr_unity_threejs/resultados/resultados_basicos.gif?raw=true)
 
 🔹 Código relevante
 ## 🔹 Código Relevante
@@ -121,9 +124,23 @@ Diferencia visual con material básico (color plano)
 
 Interacción dinámica con la luz
 
-🧩 Prompts Usados
+## 🧩 Prompts Usados
 "Configura un sistema de controles interactivos para materiales PBR en Three.js"
 "Crea una comparación visual entre MeshStandardMaterial y MeshBasicMaterial"
+
+
+----------
+
+## 👥 Integrantes
+
+-   Sebastián Muñoz → jumunozle@unal.edu.co
+    
+-   Carlos Camacho → cacamacho@unal.edu.co
+    
+-   Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+    
+-   Cristian Medina → crmedinab@unal.edu.co
+
 
 💬 Reflexión Final
 Este taller me permitió comprender en profundidad cómo los materiales PBR simulan el comportamiento físico de la luz, especialmente a través del uso combinado de mapas de texturas. La parte más interesante fue observar cómo pequeños ajustes en los valores de roughness y metalness producían cambios significativos en la apariencia final.
