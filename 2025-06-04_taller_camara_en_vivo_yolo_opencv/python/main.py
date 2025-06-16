@@ -3,6 +3,8 @@
 #python.exe -m pip install ultralytics opencv-python numpy
 from ultralytics import YOLO
 
+
+
 # Carga el modelo (por ejemplo el preentrenado yolov8n.pt)
 model = YOLO("yolov8n.pt")  # o yolov8s.pt según tus recursos
 
@@ -20,7 +22,7 @@ if not cap.isOpened():
     exit()
 
 
-# Filros opcionales
+# Filros
 def aplicar_filtros(frame, opc=0):
     """
     opc == 0 -> sin filtro
