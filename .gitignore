@@ -439,4 +439,21 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# 🔒 Archivos de Unity que a veces no se ignoran bien
+unity/Library/
+unity/Temp/
+unity/Obj/
+unity/Logs/
+unity/.vs/
+
+# 🚫 Forzar exclusión de paquetes internos
+unity/Packages/com.unity.*
+
+# 🧹 Otros ajustes por seguridad
+*.cs.meta
+*.mat.meta
+*.controller.meta
+*.anim.meta
+
+
 # End of https://www.toptal.com/developers/gitignore/api/unity,python,node,react,processing,windows
