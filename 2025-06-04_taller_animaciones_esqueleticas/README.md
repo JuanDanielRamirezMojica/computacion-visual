@@ -123,14 +123,10 @@ Preparé el GIF y la documentación
 ---
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
-
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
-
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 ---
 
 ## ✅ Checklist de Entrega
