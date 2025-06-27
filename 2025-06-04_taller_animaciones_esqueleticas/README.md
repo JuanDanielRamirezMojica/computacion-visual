@@ -1,7 +1,11 @@
 # 🧪 Taller - Animaciones por Esqueleto: Importando y Reproduciendo Animaciones
 
 📅 Fecha  
-2025-06-23
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 
 ---
 
@@ -97,9 +101,6 @@ useEffect(() => {
 
 ## 📊 Resultados Visuales
 ![anim_esqueleticas](https://github.com/user-attachments/assets/5c5afe01-e836-43f0-b9fd-ee707f389d7d)
----
-
-## 🧩 Prompts Usados
 
 
 ---
