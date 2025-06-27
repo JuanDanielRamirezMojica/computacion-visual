@@ -1,5 +1,16 @@
 # Taller - IA Visual Colaborativa: Comparte tus Resultados en Web
 
+
+
+### 📅 Fecha  
+
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
+
+
 ## 🎯 Objetivo del taller
 
 Desarrollar una solución donde los resultados de un modelo visual de IA (detecciones, métricas o imágenes) puedan compartirse en una página web sencilla. Esto permite que otros usuarios o compañeros vean y comprendan visualmente qué fue detectado, cómo se comportó el sistema y qué resultados produjo.
