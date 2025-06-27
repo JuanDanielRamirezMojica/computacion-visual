@@ -1,8 +1,13 @@
 # 🧠 Taller - Realidad Aumentada Web con AR.js y Marcadores
 
-📅 Fecha: 2025-06-25  
-🎓 Curso: Computación Visual  
-👤 Estudiante: Neron López
+📅 Fecha  
+
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
+
 
 ---
 
@@ -50,10 +55,35 @@ AR.js utiliza marcadores (`.patt`) para detectar patrones en la cámara del nave
   </a-marker>
   <a-entity camera></a-entity>
 </a-scene>
+```
 
 
 
-🤔 Reflexión final
+
+## 📚 Entrega
+
+```
+2025-06-04_taller_arjs_realidad_aumentada_marcadores_web/
+ └── index.html/
+ └── 0628.gif/
+ └── README.md 
+```
+
+---
+
+
+## 👥 Integrantes
+
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
+
+
+---
+
+
+## Reflexión 
 
 ¿Qué limitaciones tiene la realidad aumentada basada en marcadores?
 Requiere impresiones físicas o imágenes claras con buena iluminación.
