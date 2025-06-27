@@ -1,7 +1,11 @@
 # 🧪 Cinemática Directa: Animando Brazos Robóticos o Cadenas Articuladas
 
 ## 📅 Fecha
-`2025-06-25` – Fecha de entrega 
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 
 ---
 
@@ -91,6 +95,15 @@ public class RoboticArmController : MonoBehaviour
 
 ```
 
+## 📚 Entrega
+
+```
+2025-06-04_taller_cinematica_directa_fk/
+ └── unity/
+ └── README.md 
+```
+
+
 ---
 ## 💻 Reflexión: ¿Animando Brazos Robóticos?
 
@@ -99,13 +112,9 @@ La animación realista de brazos requiere emular la coordinación entre rotacion
 ---
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
-
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
-
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 ---
 
