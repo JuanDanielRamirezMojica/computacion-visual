@@ -1,8 +1,11 @@
 # Taller 68 – Calibración de Cámaras (Una y Dos Cámaras) con Python
 
 📅 Fecha  
-2025-06-23
+2025-06-04 – Fecha de asignación
 
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 ---
 
 ## 🎯 Objetivo del Taller
@@ -167,13 +170,10 @@ Visualización de resultados y reproyecciones
 Generación del README.md y documentación
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
-
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 
 ---
 
