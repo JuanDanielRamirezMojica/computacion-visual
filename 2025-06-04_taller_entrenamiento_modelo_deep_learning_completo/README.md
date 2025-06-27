@@ -1,6 +1,10 @@
 # 🧠 Taller - Entrenamiento de un Modelo de Deep Learning de Inicio a Fin
 ### 📅 Fecha  
-2025-06-23
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 
 ---
 ## 🎯 Objetivo del Taller  
@@ -119,13 +123,10 @@ Documentación completa y análisis de resultados.
 ---
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
-
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 
 ---
 
