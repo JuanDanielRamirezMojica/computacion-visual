@@ -1,7 +1,12 @@
 # 🧪 WebSockets e Interacción Visual en Tiempo Real
 
 ## 📅 Fecha
-`2025-06-25` – Fecha de entrega 
+
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 
 ---
 
@@ -24,7 +29,7 @@ WebSockets es una tecnología que permite una comunicación bidireccional y en t
 
 > ✅ En el siguiente GIF se como el servidor envia informacion en tiempo real que se carga y el grafico se va a dibujar poco a poco gracias a la info que envai el server al colab.
 
-![Gif de datos server-cliente](Python/Taller31Py.gif)
+![Gif de datos server-cliente](python/Taller31Py.gif)
 
 ---
 
@@ -75,13 +80,10 @@ asyncio.run(main())
 ---
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
-
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 
 ---
 
