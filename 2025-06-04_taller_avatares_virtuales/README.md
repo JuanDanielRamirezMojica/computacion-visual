@@ -1,7 +1,12 @@
 # Taller 67 - Avatares Virtuales en Unity y Three.js
 
 📅 Fecha  
-2025-06-23
+
+2025-06-04 – Fecha de asignación
+
+2025-06-23 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 
 ---
 
@@ -138,13 +143,10 @@ Generación del GIF de interacción
 ---
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
-
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 
 ---
 
