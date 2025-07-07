@@ -1,7 +1,11 @@
 # 🧪 Cinemática Inversa: Haciendo que el Modelo Persiga Objetivos
 
 ## 📅 Fecha
-`2025-06-25` – Fecha de entrega 
+2025-06-04 – Fecha de asignación
+
+2025-06-25 – Fecha de realización
+
+2025-06-24 – Fecha de entrega
 
 ---
 
@@ -120,20 +124,18 @@ Hay errores de rotación acumulada (gimbal lock si no se limita bien)
 Movimiento brusco o exagerado
 El brazo puede girar violentamente si no se limitan los ángulos o no se usa interpolación (Lerp, Clamp, etc.).
 
-🧠 Conclusión:
+## 🧠 Conclusión:
 
 Se puede lograr con paciencia, tutoriales y práctica. El CCD es uno de los algoritmos más accesibles para entender IK, y Unity ayuda mucho visualmente.
 
 ---
 
 ## 👥 Integrantes
-Sebastián Muñoz → jumunozle@unal.edu.co
 
-Carlos Camacho → cacamacho@unal.edu.co
-
-Juan Daniel Ramírez → juaramriezmo@unal.edu.co
-
-Cristian Medina → crmedinab@unal.edu.co
+- Sebastián Muñoz → jumunozle@unal.edu.co
+- Carlos Camacho → cacamacho@unal.edu.co  
+- Juan Daniel Ramírez → juaramriezmo@unal.edu.co
+- Sergio David López → slopezpa@unal.edu.co 
 
 ---
 
