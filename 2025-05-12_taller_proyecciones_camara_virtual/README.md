@@ -25,7 +25,7 @@ Ambas técnicas son fundamentales en gráficos por computadora, pero su elecció
 
 > ✅ A continuacion podemos ver el cambio de camara que se implemento en Unity
 
-![Cambio de camara en Unity](Gif/Taller12Unity.gif)
+![Cambio de camara en Unity](https://github.com/JuanDanielRamirezMojica/computacion-visual/blob/main/2025-05-12_taller_proyecciones_camara_virtual/gif/Taller12Unity.gif?raw=true)
 
 ---
 
