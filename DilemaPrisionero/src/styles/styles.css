@@ -1,0 +1,225 @@
+/* styles.css */
+/* Estilos generales de la aplicación */
+.app-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.transition-overlay.active {
+  opacity: 1;
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content-container > div {
+  pointer-events: auto;
+}
+
+
+/* ################################################################################## */
+/* Estilos del HomeScreen */
+.home-screen {
+  text-align: center;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 5.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #d62c2c, #2ca5dc, #2c5adc, #5a2cdc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 400% 400%;
+  animation: gradientShift 4s ease infinite;
+}
+
+.home-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.home-button {
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #d62c2c, #2ca5dc, #5a2cdc);
+  background-size: 300% 300%;
+  color: white;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(90, 44, 220, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 3s ease infinite;
+}
+
+.home-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.home-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.home-button:hover::after {
+  left: 100%;
+}
+
+.home-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(90, 44, 220, 0.4);
+}
+
+/* Animaciones compartidas */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+
+
+/* ################################################################################## */
+
+
+.home-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  color: black; /* Color base negro para todo el texto */
+}
+
+.cooperar, .traicionar {
+  transition: all 0.4s ease;
+  cursor: default;
+  color: black; /* Aseguramos que empiecen en negro */
+  text-shadow: none; /* Sin sombra inicial */
+}
+
+.cooperar:hover {
+  color: #4e95ff;
+  text-shadow: 0 0 15px rgba(78, 255, 161, 0.6);
+  transform: translateY(-3px);
+}
+
+.traicionar:hover {
+  color: #ff4e4e;
+  text-shadow: 0 0 15px rgba(255, 78, 78, 0.6);
+  transform: translateY(-3px);
+  animation: shake 0.5s ease infinite alternate;
+}
+
+/* Los signos de interrogación mantienen el color negro siempre */
+.home-subtitle span:not(.cooperar):not(.traicionar) {
+  color: black;
+}
+
+/* Animación de shake (se mantiene igual) */
+@keyframes shake {
+  0% { transform: translateY(-3px) translateX(0); }
+  25% { transform: translateY(-3px) translateX(-2px); }
+  50% { transform: translateY(-3px) translateX(2px); }
+  75% { transform: translateY(-3px) translateX(-2px); }
+  100% { transform: translateY(-3px) translateX(2px); }
+}
+
+
+
+
+/* ################################################################################## */
+
+/* Estilos del GameScreen */
+.screen-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.back-button {
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #5a2cdc, #2ca5dc, #d62c2c);
+  background-size: 300% 300%;
+  color: white;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(90, 44, 220, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 3s ease infinite;
+  margin-top: 20px;
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.back-button:hover .button-glow {
+  left: 100%;
+}
+
+.back-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(90, 44, 220, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
