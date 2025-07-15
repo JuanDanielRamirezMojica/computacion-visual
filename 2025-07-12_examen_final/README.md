@@ -218,7 +218,7 @@ También se intentó mostrar una **cuenta regresiva** cuando se detecta un gesto
 
 ### Propuesta general
 
-Sistema cliente-servidor que permite el procesamiento de cámara y voz en tiempo real, con resultados enviados por WebSocket. El frontend capra video, el backend procesa gestos y voz, y ambos se sincronizan para mostrar resultados del juego.
+Sistema cliente-servidor que permite el procesamiento de cámara y voz en tiempo real, con resultados enviados por WebSocket. El frontend captura video, el backend procesa gestos y voz, y ambos se sincronizan para mostrar resultados del juego.
 
 ### Relación entre módulos y datos
 
