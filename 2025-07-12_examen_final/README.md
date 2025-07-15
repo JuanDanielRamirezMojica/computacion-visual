@@ -10,7 +10,9 @@
 
 **El Dilema del Prisionero: Una experiencia interactiva con teoría de juegos, visión por computador y visualización 3D.**
 
-### Vídeo Explicativo:
+----------
+
+## Vídeo Explicativo:
 
 https://www.youtube.com/watch?v=p-yxypD-lLw
 
