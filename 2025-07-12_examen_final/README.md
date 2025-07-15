@@ -115,6 +115,97 @@ La experiencia se compone de varias etapas:
 
 ----------
 
+# Talleres utilizados
+
+ ### 1. Taller 13 - Gestos con Cámara Web: Control Visual con MediaPipe
+✔ Aplicación en proyecto:
+
+Detectas manos con MediaPipe en tiempo real.
+
+Usas el número de dedos levantados para mapear decisiones: puño cerrado = traicionar, palma abierta = cooperar, ✌️ = siguiente ronda.
+
+Aunque no todos los gestos se conectan al backend aún, el sistema de detección funciona visualmente (efectos de color y animación), lo cual cumple con el objetivo del taller.
+
+### 2. Taller 23 - Voz al Código: Comandos por Reconocimiento de Voz Local
+✔ Aplicación en  proyecto:
+
+Integra reconocimiento de voz con speech_recognition.
+
+Reconoces comandos como "coopero", "traiciono", "siguiente".
+
+Aunque en el frontend aún no se aplican las acciones automáticamente, el backend sí recibe y detecta los comandos, por lo que implementaste bien la lógica central del taller.
+
+### 3. Taller 24 - Interfaces Multimodales: Uniendo Voz y Gestos
+✔ Aplicación en tu proyecto:
+
+Tienes una interfaz que escucha comandos de voz y detecta gestos.
+
+Aunque no combinaste directamente ambos inputs para decisiones conjuntas (voz y gesto simultáneo), la arquitecra y la intención de tener ambos canales sí reflejan el objetivo del taller.
+
+### 4. Taller 47/48 - Detección de Objetos en Tiempo Real con YOLO y Webcam
+✔ Aplicación en proyecto:
+
+Tienes un backend con YOLOv8 y OpenCV integrados.
+
+Aunque acalmente no estás usando YOLO para la lógica del juego, sí está cargado y en funcionamiento (según los logs y errores previos).
+
+Además, aplicaste filtros visuales como el fondo rojo/verde al detectar gestos, lo cual refleja los principios del taller.
+
+### 5. Taller - WebSockets e Interacción Visual en Tiempo Real
+✔ Aplicación en tu proyecto:
+
+ comunicación entre frontend (React) y backend (FastAPI) se realiza en tiempo real usando WebSockets.
+
+Transmites frames procesados por la cámara, resultados de detección y gestos.
+
+Recibes feedback visual dinámico en el canvas del jugador, como en el taller.
+
+### 6. Taller 45 - Visualización de Datos en Tiempo Real: Gráficas en Movimiento
+✔ Aplicación en  proyecto:
+
+Al final del juego, puedes ver los resultados en gráficas 3D y 2D.
+
+Estas gráficas permiten modificar su apariencia con sliders: color, ancho, espaciado, grosor de líneas.
+
+Estás simulando una forma de visualización interactiva de datos basada en juego real, que encaja con este taller.
+
+### 7. Taller 65 - Colisiones y Partículas: Reacciones Visuales Interactivas
+✔ Aplicación parcial / inspiración visual:
+
+No estás usando colisiones físicas con cannon.js, pero sí usaste la idea visual de reacciones al gesto (fondo rojo, giro de cámara, transición).
+
+ menú con fondo animado de partículas que sigue el mouse también es un guiño al uso visual del taller.
+
+Aunque no implementas físicas, sí usas eventos visuales reactivos como cambios de color por interacción.
+
+### 8. Dashboard Visual 3D - Sliders y Botones para Controlar Escenas
+✔ Aplicación en proyecto:
+
+En  pantalla de gráficas 3D, implementaste sliders y botones para controlar los gráficos.
+
+Puedes cambiar colores, grosor de líneas y espaciado/barra de los gráficos.
+
+Esto cumple totalmente el objetivo del taller de dashboards interactivos.
+
+
+-------------
+
+# Resumen talleres usados
+
+| Taller                          | ¿Aplicado? | ¿Cómo se refleja?                                      |
+|--------------------------------|------------|--------------------------------------------------------|
+| T13 - Gestos con MediaPipe     | ✅         | Detección de puño, palma y ✌️                         |
+| T23 - Comandos por Voz         | ✅         | "coopero", "traiciono", "siguiente"                   |
+| T24 - Interfaces Multimodales  | ✅         | Combinación de gestos y voz                           |
+| T47/48 - YOLO en Webcam        | ✅         | Backend con YOLO, efectos visuales                    |
+| Taller WebSockets              | ✅         | Comunicación en tiempo real                           |
+| T45 - Gráficas en Tiempo Real  | ✅         | Visualización final del juego                         |
+| T65 - Reacciones Visuales y Partículas | ✅ Parcial | Fondo animado + feedback de gesto                     |
+| Dashboard 3D                   | ✅         | Sliders y botones para modificar gráficas             |
+
+-------------
+
+
 ##  Limitaciones y Retos
 
 Aunque se integraron múltiples entradas (voz, gestos, botones), la decisión final del jugador sólo se registra si se pulsa un botón. Los comandos de voz y los gestos se detectan y muestran visualmente, pero **no logran desencadenar la jugada en el backend**, debido a que los eventos no están correctamente conectados a `processPlayerMove` o `processNextRound`.
@@ -127,7 +218,7 @@ También se intentó mostrar una **cuenta regresiva** cuando se detecta un gesto
 
 ### Propuesta general
 
-Sistema cliente-servidor que permite el procesamiento de cámara y voz en tiempo real, con resultados enviados por WebSocket. El frontend captura video, el backend procesa gestos y voz, y ambos se sincronizan para mostrar resultados del juego.
+Sistema cliente-servidor que permite el procesamiento de cámara y voz en tiempo real, con resultados enviados por WebSocket. El frontend capra video, el backend procesa gestos y voz, y ambos se sincronizan para mostrar resultados del juego.
 
 ### Relación entre módulos y datos
 
