@@ -1,0 +1,58 @@
+/* App.css - Estilos principales de la aplicación */
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.upload-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.reconstruction-container {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+.scene-container {
+  flex: 1;
+  position: relative;
+  background: #1e293b;
+  border-radius: 8px;
+  margin: 1rem 0 1rem 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .reconstruction-container {
+    flex-direction: column;
+  }
+  
+  .scene-container {
+    margin: 1rem;
+    min-height: 400px;
+  }
+  
+  .upload-container {
+    padding: 1rem;
+  }
+}
